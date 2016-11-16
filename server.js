@@ -12,7 +12,7 @@ var logger = require('morgan');
 var session = require('express-session');
 var cookieParser = require('cookie-parser'); // for working with cookies
 // and we bring in our models folder. This brings in the model's object, as defined in index.js
-var models = require('./models');
+// var models = require('./models');
 var burgers_controller = require('./controller/burgers_controller');
 var users_controller = require('./controller/users_controller');
 
@@ -50,10 +50,13 @@ app.use('/', burgers_controller);
 app.use('/users', users_controller);
 
 // sync the tables
-models.sequelize.sync();
+// models.sequelize.sync();
 
 
-// app listens on port 3000
-app.listen(3000, function() {
-	console.log("Listening on port 3000")
-})
+// // app listens on port 3000
+// app.listen(3000, function() {
+// 	console.log("Listening on port 3000")
+// })
+
+
+module.exports = app;
