@@ -1,0 +1,55 @@
+body {
+	background: #cddc39;
+}
+
+h1 {
+	margin-left: 450px;
+}
+
+h2 {
+	display: inline-block;
+	padding:0px;
+	margin-left: 200px;
+}
+
+ul{
+	display: inline-block;
+	padding:0px;
+	margin-left: 283px;
+	list-style-type: decimal;
+}
+/*
+ul.col-md-6.devoured-burgers{
+	display: inline-block;
+	padding:0px;
+	margin-right: 283px;
+	margin-left: 100;
+	list-style-type: decimal;
+}*/
+
+
+img{
+	margin-left: 477px;
+	width:150px;
+}
+
+li {
+
+  margin: 5px;
+  padding: 5px;
+      border: 1px solid #3F51B5;
+    padding: 9px;
+    background: white;
+    border-radius: 5px;
+}
+
+#burger, #submit, p {
+	height:47px;
+	width:30%;
+	margin-left: 400px;
+}
+
+button#devour{
+	float: right;
+}
+
