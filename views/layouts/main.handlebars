@@ -9,14 +9,17 @@ llHere is the main HTML where handlebars will render to
 		<title>Assignment 15!</title>
 	</head>
 	<body>
+	<!-- display image -->
 	<img src="/assets/images/burger.jpg">
 		<p>
 		{{#unless logged_in}}
+		<!-- display sign in button -->
 			<button><a href="/users/sign-in">Sign in</a></button>
 			<button><a href="/users/new">Sign Up</a></button>
 		{{/unless}}
 
 		{{#if logged_in}}
+		<!-- if logged in then display email and signout button -->
 			Welcome {{email}}! <br>
 			<button><a href="/users/sign-out">Sign Out</a></button>
 		{{/if}}
