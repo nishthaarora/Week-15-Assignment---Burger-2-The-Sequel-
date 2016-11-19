@@ -3,7 +3,6 @@
 
 // Initialize Express app
 var express = require('express');
-// var router = require('router');
 var bodyParser = require('body-parser')
 var methodOverride = require('method-override');
 var exphbs = require('express-handlebars');
@@ -42,6 +41,7 @@ var exphbs = require('express-handlebars');
 app.engine('handlebars', exphbs({
     defaultLayout: 'main'
 }));
+// setting up view engine
 app.set('view engine', 'handlebars');
 
 app.use(logger('dev'));
@@ -49,21 +49,16 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(process.cwd() + '/public'));
 
+// default routes
 app.use('/', burgers_controller);
 app.use('/users', users_controller);
 
 // sync the tables
 models.sequelize.sync();
 
-
-// // app listens on port 3000
-// app.listen(3000, function() {
-// 	console.log("Listening on port 3000")
-// })
-
+// listening to server
 app.listen(process.env.PORT || 3000, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });
 
 
-// module.exports = app;
